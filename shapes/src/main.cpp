@@ -97,8 +97,8 @@ int main() {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(1);
 
-    auto vertexShader = createShader(getAssetPath("shaders/triangle.vert"), GL_VERTEX_SHADER);
-    auto fragmentShader = createShader(getAssetPath("shaders/triangle.frag"), GL_FRAGMENT_SHADER);
+    auto vertexShader = createShader(getAssetPath("shaders/shape.vert"), GL_VERTEX_SHADER);
+    auto fragmentShader = createShader(getAssetPath("shaders/shape.frag"), GL_FRAGMENT_SHADER);
     auto shader = createShaderProgram({vertexShader, fragmentShader});
 
     while (!glfwWindowShouldClose(window)) {
