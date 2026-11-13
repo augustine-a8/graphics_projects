@@ -1,16 +1,15 @@
-# Computer Graphics Boilerplate
+# Computer Graphics Project
 
-A Linux C++20 starter project for computer graphics coursework. The current
-`triangle` program opens an 800 × 600 OpenGL window and clears it to a solid
-color. It is a starting point for drawing a triangle; no triangle geometry is
-drawn yet.
+A Linux C++20 OpenGL project for computer graphics coursework. The `shapes`
+application opens an 800 × 600 window and renders a colored triangle, circle,
+and square. Press **Esc** to close the window.
 
 ## Project layout
 
 | Path | Purpose |
 | --- | --- |
 | `CMakeLists.txt` | Root CMake project configuration and build entry point. |
-| `triangle/` | The example application. Its `CMakeLists.txt` defines the `triangle` executable, `src/` contains the program, and `include/` is for application headers. |
+| `shapes/` | The example application. Its `CMakeLists.txt` defines the `shapes` executable; `src/` contains the program, `include/` contains application headers, and `assets/shaders/` contains the GLSL shaders. |
 | `third_party/` | CMake targets and bundled dependencies used by the project. |
 | `third_party/glad/` | GLAD OpenGL function loader. |
 | `third_party/glfw/` | GLFW headers and prebuilt static library for creating a window and handling input. |
@@ -18,7 +17,7 @@ drawn yet.
 | `third_party/stbi/` | stb_image header for image loading. |
 
 GLM and stb_image are available as CMake include targets but are not currently
-used by the example.
+used by the application.
 
 ## Requirements
 
@@ -46,10 +45,11 @@ Run these commands from the project root:
 ```sh
 cmake -S . -B build
 cmake --build build
-./build/triangle/triangle
+./build/shapes/shapes
 ```
 
-The program opens a window titled **Triangle**. Press **Esc** to close it.
+The program opens a window titled **Triangle** and displays the shapes. Press
+**Esc** to close it.
 
 ## Troubleshooting
 
